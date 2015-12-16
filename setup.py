@@ -123,6 +123,8 @@ class MyBuildExt(build_ext):
 
     def _pkgconfig(self, flag, package):
         status, output = commands.getstatusoutput("pkg-config %s %s" % (flag, package))
+        if status!=0:
+            raise OSError()
         return output
 
     def _pkgconfig_include_dirs(self, package):
