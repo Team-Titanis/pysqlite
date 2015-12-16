@@ -56,7 +56,7 @@ if PYSQLITE_EXPERIMENTAL:
 
 include_dirs = []
 library_dirs = []
-libraries = []
+libraries = ['sqlite3']
 runtime_library_dirs = []
 extra_objects = []
 define_macros = []
